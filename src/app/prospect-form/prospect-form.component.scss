@@ -1,0 +1,91 @@
+button {
+  background: none;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.formBody{
+  padding: 30px 30px 25px 30px;
+}
+
+.error-message {
+  height: 32px;
+  font-size: 14px;
+  color: #fff;
+  display: none;
+  line-height: 32px;
+  white-space: nowrap;
+  padding: 0 10px;
+  margin: 0 35px 0 0;
+  position: absolute;
+  right: 100%; top: 1px;
+  z-index: 16;
+  border-radius: 3px 0 0 3px;
+  background: #EF4B52;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    border-top: 16px solid transparent;
+    border-left: 10px solid #EF4B52;
+    border-bottom: 16px solid transparent;
+  }
+}
+
+.form-holder {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.ng-touched .ng-valid + .error-message + .accept-icon {
+  display: block;
+  background: url(../../assets/images/first-section-form-ok.png) no-repeat center;
+}
+
+.ng-touched .ng-invalid + {
+
+  .error-message {
+    display: block;
+
+    + .accept-icon {
+      display: block;
+      background: url(../../assets/images/first-section-form-error.png) no-repeat center;
+    }
+  }
+}
+
+.accept-icon {
+  width: 14px;
+  height: 12px;
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: -22px;
+}
+
+@media screen and (max-width: 767px) {
+  .error-message {
+    height: auto;
+    font-size: 12px;
+    color: #EF4B52;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none;
+  }
+
+  .error-message:after {
+    display: none;
+  }
+}

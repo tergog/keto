@@ -1,0 +1,205 @@
+<div class="formBg" [formGroup]="form">
+  <div class="formContent">
+    <div class="title">Shipping info</div>
+    <div class="form-holder">
+      <select class="form-control" formControlName="country" id="id_country">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="AU">Australia</option>
+        <option value="NZ">New Zealand</option>
+        <option value="IE">Ireland</option>
+      </select>
+      <div class="error-message">Please enter your Country</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="firstName" placeholder="First Name" class="form-control first-name">
+      <div class="error-message">Please enter your First Name</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="lastName" placeholder="Last Name" class="form-control">
+      <div class="error-message">Please enter your Last Name</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="email" placeholder="Email" class="form-control">
+      <div class="error-message">Please enter your Email</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="tel" formControlName="phone" placeholder="Telephone" maxlength="10" class="form-control">
+      <div class="error-message">Please enter your Phone Number</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="address" placeholder="Address" class="form-control">
+      <div class="error-message">Please enter your Street Address</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="city" placeholder="City" class="form-control">
+      <div class="error-message">Please enter your City</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <select formControlName="state" class="form-control">
+        <option value="">Select</option>
+        <option *ngFor="let state of countries[form.value.country]" [value]="state[0]" [selected]="">{{ state[1] }}
+        </option>
+      </select>
+      <div class="error-message">Please enter your State/Province</div>
+      <div class="accept-icon"></div>
+    </div>
+    <div class="form-holder">
+      <input type="text" formControlName="zipCode" placeholder="Zip Code" class="form-control">
+      <div class="error-message">Please enter your Zip/Postal Code</div>
+      <div class="accept-icon"></div>
+    </div>
+
+    <div style="text-align: center; margin: 15px 0; font-size: 15px;">
+      <div>Is your billing address the same <br>as your shipping address?</div>
+      <div class="radio-wrapper">
+        <label>Yes
+          <input  name="payment_as_shipping"   (change)="onSelectionChange(false)" class="payment_as_shipping" checked="" type="radio">
+        </label>
+        <label>No
+          <input name="payment_as_shipping"  (change)="onSelectionChange(true)"  class="payment_as_shipping" type="radio">
+        </label>
+      </div>
+    </div>
+
+    <div class="billing-form" *ngIf="billingInfo">
+      <div class="title">Billing info</div>
+
+      <div class="form-holder">
+        <select class="form-control" formControlName="billCountry" id="id_country">
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <option value="NZ">New Zealand</option>
+          <option value="IE">Ireland</option>
+        </select>
+        <div class="error-message">Please enter your Country</div>
+        <div class="accept-icon"></div>
+      </div>
+      <div class="form-holder">
+        <input type="text" formControlName="billFirstName" placeholder="First Name" class="form-control first-name">
+        <div class="error-message">Please enter your First Name</div>
+        <div class="accept-icon"></div>
+      </div>
+      <div class="form-holder">
+        <input type="text" formControlName="billLastName" placeholder="Last Name" class="form-control">
+        <div class="error-message">Please enter your Last Name</div>
+        <div class="accept-icon"></div>
+      </div>
+
+      <div class="form-holder">
+        <input type="text" formControlName="billAddress" placeholder="Address" class="form-control">
+        <div class="error-message">Please enter your Street Address</div>
+        <div class="accept-icon"></div>
+      </div>
+      <div class="form-holder">
+        <input type="text" formControlName="billCity" placeholder="City" class="form-control">
+        <div class="error-message">Please enter your City</div>
+        <div class="accept-icon"></div>
+      </div>
+      <div class="form-holder">
+        <select formControlName="billState" class="form-control">
+          <option value="">Select</option>
+          <option *ngFor="let state of countries[form.value.country]" [value]="state[0]" [selected]="">{{ state[1] }}
+          </option>
+        </select>
+        <div class="error-message">Please enter your State/Province</div>
+        <div class="accept-icon"></div>
+      </div>
+      <div class="form-holder">
+        <input type="text" formControlName="billZipCode" placeholder="Zip Code" class="form-control">
+        <div class="error-message">Please enter your Zip/Postal Code</div>
+        <div class="accept-icon"></div>
+      </div>
+    </div>
+
+    <div class="title">Payment info</div>
+    <div class="cards clearfix">
+      <span>We accept:</span>
+      <img src="./assets/images/icon-cards.png" alt="" class="left">
+      <div class="clear"></div>
+    </div>
+
+    <div class="form-holder">
+      <input type="text"  formControlName="cardNumber" name="credit_card_number" id="ccn_masked" placeholder="Credit Card Number"
+             class="form-control error" maxlength="19">
+      <div class="error-message">Please enter your Credit Card Number</div>
+      <div class="accept-icon"></div>
+    </div>
+
+
+
+    <div class="form-holder exp-date">
+      <label>Expiration Date:</label>
+      <select class="form-control left error" formControlName="cardExpMonth">
+        <option value="" selected="selected">MM</option>
+        <option value="01">(01) January</option>
+        <option value="02">(02) February</option>
+        <option value="03">(03) March</option>
+        <option value="04">(04) April</option>
+        <option value="05">(05) May</option>
+        <option value="06">(06) June</option>
+        <option value="07">(07) July</option>
+        <option value="08">(08) August</option>
+        <option value="09">(09) September</option>
+        <option value="10">(10) October</option>
+        <option value="11">(11) November</option>
+        <option value="12">(12) December</option>
+      </select>
+      <select class="form-control right error" formControlName="cardExpYear">
+        <option value="" selected="selected">YY</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+        <option value="2031">2031</option>
+        <option value="2032">2032</option>
+        <option value="2033">2033</option>
+      </select>
+      <div class="error-message clear exp-date">Please select your Expiration Date</div>
+      <div class="accept-icon"></div>
+      <div class="clear"></div>
+    </div>
+
+
+
+    <div class="form-holder cvv-code">
+      <label>CVV Code:</label>
+      <input type="text" name="cvv2" placeholder="CVV Code" class="form-control left error" formControlName="cvv" maxlength="3">
+      <div class="error-message clear">Please enter your CVV Code</div>
+      <div class="accept-icon"></div>
+      <div class="cvv-link left"><a href="javascript:void(0)" (click)="showCard=!showCard"></a></div>
+      <div class="cvv-image clear" [ngStyle]="{'display':showCard ? 'block' : 'none' }"><img src="./assets/images/cvv-image.png" alt=""></div>
+      <div class="clear"></div>
+    </div>
+
+
+
+    <div id="rushtop">
+      <input type="image" src="./assets/images/rush-my-order.png" (click)="onSubmit()" class="img-responsive center-block"
+             width="100%" onclick="PreventExitSplash=true;">
+    </div>
+  </div>
+  <!--/form fields-->
+
+</div>
+<div class="text-center">
+  <img src="./assets/images/secure.png"><br>
+  <img src="./assets/images/order-secureicons3.jpg"><br>
+</div>

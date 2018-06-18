@@ -1,0 +1,91 @@
+<div class="main-page">
+  <section class="row">
+    <div class="container">
+
+      <!--left side-->
+      <div class="col-sm-7">
+        <img src="./assets/images/checkout-header.png" width="650" height="229" class=" img-responsive" alt="">
+
+        <div  style="cursor: pointer;" *ngFor="let propose of products" (click)="setProduct(propose)">
+          <img src="./assets/images/package{{propose.order}}{{propose.selected ? 'selected' : ''}}.jpg" width="631" height="216"  class=" img-responsive" alt="">
+        </div>
+
+
+        <!--<div id="product_2_wrapper" class="package2" data-product="product_2" style="cursor: pointer;">-->
+        <!--<img src="./assets/images/package2{{selected}}.jpg" width="631" height="216" id="package2" class=" img-responsive" alt="">-->
+        <!--</div>-->
+
+        <!--<div id="product_3_wrapper" class="package3" data-product="product_3" style="cursor: pointer;"><img-->
+        <!--src="./assets/images/package3{{selected}}.jpg" width="631" height="217" id="package3" class=" img-responsive" alt="">-->
+        <!--</div>-->
+
+        <!--<div id="product_4_wrapper" class="package4" data-product="product_4" style="cursor: pointer;"><img-->
+        <!--src="./assets/images/package4.jpg" width="631" height="217" id="package4" class=" img-responsive" alt="">-->
+        <!--</div>-->
+
+        <div><img src="./assets/images/or-secureicons.jpg" class="img-responsive center-block"></div>
+      </div>
+      <!--/left side-->
+
+      <!--right side-->
+      <div class=" col-sm-4 nopad" id="orderNow">
+
+        <!--form area-->
+        <a name="order"></a>
+        <img src="./assets/images/checkout-header2.png" class="img-responsive center-block desktop" alt="">
+        <img src="./assets/images/seals-m.png" width="240" height="79" class="img-responsive  center-block mobile"
+             alt="">
+        <div class="formBox center-block">
+          <div class="formTop"><img src="./assets/images/checkout-first-step.png" width="303" height="87"
+                                    class="img-responsive center-block" alt=""></div>
+          <app-final-prospect-form [productId]="productId"></app-final-prospect-form>
+
+        </div>
+        <!--/form area-->
+
+
+      </div>
+      <!--/right side-->
+
+    </div>
+  </section>
+
+  <div class="row">
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-1">
+        <img src="./assets/images/footer-logos-image.png" width="960" height="87" class="center-block img-responsive"
+             alt=""><br>
+        <div class="col-lg-12 content centered" style="font-size:12px;">
+          <div id="disclaimers">
+            <p>
+            </p>
+            <div class="text-center">
+              [ <a href="javascript:void(0)" class="open-popup-link" id="faq" (click)="openFaqModal()">FAQ</a> ]
+              [ <a href="javascript:void(0)" class="open-popup-link" id="shipping" (click)="openShippingModal()">Shipping</a> ]
+              [ <a href="javascript:void(0)" class="open-popup-link" id="privacy" (click)="openPrivacyModal()">Privacy</a> ]
+              [ <a href="javascript:void(0)" class="open-popup-link" id="terms-info" (click)="openTermsModal()">Terms</a> ]
+              [ <a href="javascript:void(0)" class="open-popup-link" id="disclaimer" (click)="openDisclaimerModal()">Disclaimer</a> ]
+              [ <a href="javascript:void(0)" class="open-popup-link" id="contact-us" (click)="openContactModal()">Contact Us</a> ]
+            </div>
+            <br>
+            <br>
+            Purefit KETO is committed to maintaining the highest quality products and the utmost integrity in business
+            practices. All products sold on this website are certified by Good Manufacturing Practices (GMP), which is
+            the highest standard of testing in the supplement industry.
+            <p></p>
+            <p></p>
+            <p>
+            </p>
+            Notice: The products and information found on this site are not intended to replace professional medical
+            advice or treatment. These statements have not been evaluated by the Food and Drug Administration. These
+            products are not intended to diagnose, treat, cure or prevent any disease. Individual results may vary.
+            <br>
+            <br>
+            © Copyright 2018 Purefit KETO.<br>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

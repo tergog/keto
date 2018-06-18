@@ -1,0 +1,63 @@
+<div class="formBody" [formGroup]="form">
+  <div class="form-holder">
+    <select class="form-control" formControlName="country" id="id_country">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="AU">Australia</option>
+        <option value="NZ">New Zealand</option>
+        <option value="IE">Ireland</option>
+    </select>
+    <div class="error-message">Please enter your Country</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="firstName" placeholder="First Name" class="form-control first-name">
+    <div class="error-message">Please enter your First Name</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="lastName" placeholder="Last Name" class="form-control">
+    <div class="error-message">Please enter your Last Name</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="email" placeholder="Email" class="form-control">
+    <div class="error-message">Please enter your Email</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="tel" formControlName="phone" placeholder="Telephone" maxlength="10" class="form-control">
+    <div class="error-message">Please enter your Phone Number</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="address" placeholder="Address" class="form-control">
+    <div class="error-message">Please enter your Street Address</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="city" placeholder="City" class="form-control">
+    <div class="error-message">Please enter your City</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <select formControlName="state" class="form-control">
+      <option value="">Select</option>
+      <option *ngFor="let state of countries[form.value.country]" [value]="state[0]" [selected]="">{{ state[1] }}</option>
+    </select>
+    <div class="error-message">Please enter your State/Province</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div class="form-holder">
+    <input type="text" formControlName="zipCode" placeholder="Zip Code" class="form-control">
+    <div class="error-message">Please enter your Zip/Postal Code</div>
+    <div class="accept-icon"></div>
+  </div>
+  <div id="rushtop" class="text-center">
+    <button type="submit" (click)="onSubmit()">
+      <img src="./assets/images/rush-my-order.png" alt="">
+    </button>
+    <br>
+    <img src="./assets/images/secure.png" alt="">
+  </div>
+</div>

@@ -1,1 +1,812 @@
-/* You can add global styles to this file, and also import other style files */
+/*** Start fix bootstrap ***/
+a:hover {
+  text-decoration:none !important;
+}
+
+@media (min-width: 768px) {
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+    height: 40px;
+  }
+}
+
+.navbar-brand {
+  float: left;
+  height: 60px;
+  font-size:14px;
+
+  padding:10px 0 0 15px;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 19px;
+    padding-bottom: 10px;
+  }
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ff6600;
+  background-color: #fff;
+}
+/*** End fix bootstrap ***/
+
+
+
+/*** Modals ***/
+.popup {
+  padding: 34px 40px 40px 40px;
+  width: 100%;
+}
+.modal-footer {
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+.modal-footer > .close-popup-link {
+  outline: none;
+  width: auto;
+  height: 38px;
+  display: inline-block;
+  font-size: 20px;
+  color: #766118;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  opacity: 1;
+  padding: 0 25px;
+  position: relative;
+  top: 0;
+  right: 0;
+  border: 1px solid #e0b712;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 #ffe786;
+  -moz-box-shadow: inset 0 1px 0 #ffe786;
+  -o-box-shadow: inset 0 1px 0 #ffe786;
+  box-shadow: inset 0 1px 0 #ffe786;
+  -webkit-text-shadow: 1px 1px 0 #fbe27e;
+  -moz-text-shadow: 1px 1px 0 #fbe27e;
+  -o-text-shadow: 1px 1px 0 #fbe27e;
+  text-shadow: 1px 1px 0 #fbe27e;
+  background: #fdd638;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fdd638), to(#f3c81e));
+  background: -webkit-linear-gradient(#fdd638, #f3c81e);
+  background: -moz-linear-gradient(#fdd638, #f3c81e);
+  background: -ms-linear-gradient(#fdd638, #f3c81e);
+  background: -o-linear-gradient(#fdd638, #f3c81e);
+  background: linear-gradient(#fdd638, #f3c81e);
+}
+
+.modal-footer > .close-popup-link:hover {
+  color: #77620d;
+  background: #f3c81e;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3c81e), to(#fdd638));
+  background: -webkit-linear-gradient(#f3c81e, #fdd638);
+  background: -moz-linear-gradient(#f3c81e, #fdd638);
+  background: -ms-linear-gradient(#f3c81e, #fdd638);
+  background: -o-linear-gradient(#f3c81e, #fdd638);
+  background: linear-gradient(#f3c81e, #fdd638);
+}
+
+
+.remove-icon {
+  left: 100%;
+  top: -10px;
+
+  &:hover {
+    cursor: pointer;
+    font-size: 15px;
+  }
+}
+
+
+.popup-wrapper .popup h2 {
+  padding: 0 0 16px;
+  margin: 0;
+}
+
+.popup-wrapper .popup h3 {
+  line-height: 24px;
+  padding: 0 0 17px;
+  margin: 0;
+}
+
+.popup-wrapper .popup h4 {
+  font-weight: bold;
+  padding: 0 0 15px;
+  margin: 0;
+}
+
+.popup-wrapper .popup header + h3 {
+  padding: 3px 0 17px;
+}
+
+.popup-wrapper .popup p {
+  padding: 0 0 17px;
+}
+
+.popup-wrapper .popup .form-popup {
+  padding: 8px 0 22px;
+}
+
+.popup-wrapper .popup .form-popup .form-holder {
+  width: auto;
+  margin: 0;
+}
+
+.popup-wrapper .popup .form-popup .form-holder select,
+.popup-wrapper .popup .form-popup .form-holder input[type="text"],
+.popup-wrapper .popup .form-popup .form-holder input[type="email"] {
+  width: 400px;
+}
+
+.popup-wrapper .popup .form-popup .form-holder .error-message {
+  height: auto;
+  font-size: 13px;
+  color: #ee4c29;
+  line-height: 14px;
+  text-align: left;
+  padding: 3px 4px 2px 4px;
+  position: relative;
+  right: 0; top: 0;
+  background: none;
+}
+
+.popup-wrapper .popup .form-popup .form-holder .error-message:after {
+  display: none;
+}
+
+.popup-wrapper .popup .form-popup .button {
+  width: 160px;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0;
+  letter-spacing: -1px;
+  border-radius: 5px;
+}
+
+.popup-wrapper .popup .form-popup .button:hover {
+  color: #fff !important;
+}
+
+.popup-wrapper #popup-declined .popup-inner {
+  position: relative;
+  padding: 27px 40px 40px 40px;
+}
+
+.popup-wrapper #popup-declined h2 {
+  text-align: center;
+  padding: 0 0 24px;
+}
+
+.popup-wrapper #popup-declined h3 {
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: none;
+  padding: 0 0 4px;
+}
+
+.popup-wrapper #popup-declined .reason {
+  text-align: center;
+  padding: 23px 100px 25px;
+  margin: 0 0 23px;
+  border: 2px solid #F3351B;
+  border-radius: 5px;
+}
+
+.popup-wrapper #popup-declined .reason h3 {
+  color: #F3351B;
+  padding: 0 0 8px;
+}
+
+.popup-wrapper #popup-declined ul {
+  padding: 4px 0 3px 30px;
+}
+
+.popup-wrapper #popup-declined form {
+  padding: 12px 0 0 0;
+  margin: 0;
+}
+
+.popup-wrapper #popup-declined form .form-holder {
+  width: 100%;
+  padding: 0 0 10px;
+}
+
+.popup-wrapper #popup-declined form .form-holder label {
+  width: 150px;
+  float: left;
+  line-height: 34px;
+}
+
+.popup-wrapper #popup-declined form .form-holder input[type="text"] {
+  width: 300px;
+}
+
+.popup-wrapper #popup-declined form .form-holder select,
+.popup-wrapper #popup-declined form .form-holder.cvv-code input[type="text"] {
+  width: 100px !important;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+
+.popup-wrapper #popup-declined form .form-holder.cvv-code .cvv-link a {
+  font-size: 12px;
+  color: #66CC33;
+  line-height: 34px;
+}
+
+.popup-wrapper #popup-declined form .form-holder.cvv-code .cvv-image {
+  height: auto;
+  display: none;
+  text-align: left;
+  padding: 10px 0 0 150px;
+}
+
+.popup-wrapper #popup-declined form .form-holder.cvv-code .cvv-image img {
+  width: 205px;
+}
+
+.popup-wrapper #popup-declined form .button {
+  width: 205px;
+  margin: 0 0 0 150px;
+}
+
+.popup-wrapper #popup-declined .lock {
+  height: 30px;
+  font-size: 11px;
+  color: #999;
+  line-height: 14px;
+  text-align: right;
+  padding: 1px 33px 0 0;
+  position: absolute;
+  right: 45px; bottom: 10px;
+}
+
+.popup-wrapper #popup-declined .lock img {
+  width: 32px;
+  position: absolute;
+  top: 0; right: 0;
+}
+
+.popup-wrapper #popup-declined .tip {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px; bottom: 10px;
+}
+
+.popup-wrapper #popup-declined .tip .icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  padding: 0 0 0 1px;
+  position: relative;
+  border-radius: 20px;
+  background: #69C03B;
+}
+
+.popup-wrapper #popup-declined .tip .text {
+  width: 370px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 14px;
+  display: none;
+  text-align: right;
+  padding: 10px 15px 12px;
+  position: absolute;
+  top: 45px; right: -10px;
+  border-radius: 4px;
+  background: #69C03B;
+}
+
+.popup-wrapper #popup-declined .tip .text:before {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  right: 17px;
+  top: -10px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #69C03B;
+}
+
+.popup-wrapper #popup-declined .tip:hover .text,
+.popup-wrapper #popup-declined .tip:focus .text {
+  display: block;
+}
+
+.popup-loading-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 1100;
+  background: rgba(0,0,0,0.95);
+}
+
+.popup-loading-wrapper .popup {
+  min-width: 300px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+
+.popup-loading-wrapper .popup h2 {
+  font-size: 32px;
+  color: #fff;
+  line-height: 36px;
+  padding: 7px 0 22px;
+  margin: 0;
+}
+
+.popup-loading-wrapper .popup h3 {
+  line-height: 26px;
+  padding: 0 0 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.popup-loading-wrapper .popup p {
+  opacity: 0.5;
+  font-size: 18px;
+  padding: 8px 0 3px;
+}
+
+.popup-loading-wrapper .popup .product-image {
+  width: 110px;
+  height: 176px;
+  margin: 0 auto 6px;
+  position: relative;
+ // background: url("../../assets/images/keto-logo-lg.png") no-repeat left top;
+}
+
+.popup-loading-wrapper .popup .lock-image {
+  width: 90px;
+  margin: 0 auto 3px;
+}
+
+.popup-loading-wrapper .popup .loading-image {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.popup-banner-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.8);
+}
+
+.popup-banner-wrapper .popup-banner {
+  padding: 50px 10px 0 10px;
+}
+
+.popup-banner-wrapper .popup-banner figure a {
+  max-width: 600px;
+  margin: auto;
+}
+
+.popup-banner-wrapper .popup-banner figure a {
+  display: block;
+}
+
+.popup-banner-wrapper .popup-banner figure a img {
+  width: 100%;
+}
+
+.popup#popup-mobile-order-form .popup-inner {
+  padding: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.popup#popup-mobile-order-form  form {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  -moz-box-shadow: 0 0 5px #ccc;
+  -o-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  background: #fff;
+}
+
+.popup#popup-mobile-order-form form header {
+  height: 65px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  color: #6c571c;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 0 0 0;
+  margin: 0 0 20px;
+  border-radius: 3px;
+  -webkit-text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  -moz-text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  -o-text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  background: #FAC021;
+}
+
+.popup#popup-mobile-order-form form header span {
+  font-size: 30px;
+  display: block;
+  letter-spacing: -1px;
+  padding: 3px 0 0 0;
+}
+
+.popup#popup-mobile-order-form form .form-holder {
+  margin: 0 20px;
+}
+
+.popup#popup-mobile-order-form form .button {
+  width: 260px;
+  height: 60px;
+  font-size: 30px;
+  line-height: 22px;
+  padding: 3px 0 0;
+  margin: 0 20px;
+  position: relative;
+  border-radius: 6px;
+}
+
+.popup#popup-mobile-order-form form .button span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.popup#popup-mobile-order-form form .icons {
+  width: 192px;
+  height: 43px;
+  margin: 20px auto 0;
+}
+
+.popup#popup-mobile-order-form  form footer {
+  text-align: center;
+  padding: 20px 0;
+  margin: 17px 20px 0;
+}
+
+.popup#popup-mobile-order-form  form footer .button {
+  width: auto;
+  height: 38px;
+  display: inline-block;
+  font-size: 20px;
+  color: #766118;
+  line-height: 38px;
+  opacity: 1;
+  top: 0;
+  padding: 0 25px;
+  border: none;
+  border-radius: 3px;
+  background: #F0C435;
+}
+
+/*end popups*/
+
+.footer-menu {
+  text-align: center;
+}
+
+.footer-menu li {
+  display: inline-block;
+  list-style: none;
+  float: none;
+  padding: 0 5px;
+  border-left: 1px solid #666;
+}
+
+.footer-menu li:first-child {
+  border: none;
+}
+
+.footer-menu li a {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.footer-menu li a:hover {
+  text-decoration: none;
+}
+
+.popup input, select {
+  vertical-align: middle;
+}
+
+.popup select,
+.popup textarea,
+.popup input[type=tel],
+.popup input[type=text],
+.popup input[type=email],
+.popup input[type=password],
+.popup input[type=number] {
+  width: 100%;
+  height: 34px;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: #52585d;
+  font-style: normal;
+  text-indent: 0;
+  line-height: 16px;
+  outline: none;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid #D4D4D4;
+  background: #fff;
+}
+
+.popup select {
+  padding: 7px 6px 8px;
+}
+
+.popup textarea::-webkit-input-placeholder,
+.popup input[type=tel]::-webkit-input-placeholder,
+.popup input[type=text]::-webkit-input-placeholder,
+.popup input[type=email]::-webkit-input-placeholder,
+.popup input[type=password]::-webkit-input-placeholder,
+.popup input[type=number]::-webkit-input-placeholder {
+  color: #52585d;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.popup textarea::-moz-placeholder,
+.popup input[type=tel]::-moz-placeholder,
+.popup input[type=text]::-moz-placeholder,
+.popup input[type=email]::-moz-placeholder,
+.popup input[type=password]::-moz-placeholder,
+.popup input[type=number]::-moz-placeholder {
+  color: #52585d;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.popup textarea:-moz-placeholder,
+.popup input[type=tel]:-moz-placeholder,
+.popup input[type=text]:-moz-placeholder,
+.popup input[type=email]:-moz-placeholder,
+.popup input[type=password]:-moz-placeholder,
+.popup input[type=number]:-moz-placeholder {
+  color: #52585d;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.popup textarea:-ms-input-placeholder,
+.popup input[type=tel]:-ms-input-placeholder,
+.popup input[type=text]:-ms-input-placeholder,
+.popup input[type=email]:-ms-input-placeholder,
+.popup input[type=password]:-ms-input-placeholder,
+.popup input[type=number]:-ms-input-placeholder {
+  color: #52585d;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.popup select:focus,
+.popup textarea:focus,
+.popup input[type=tel]:focus,
+.popup input[type=text]:focus,
+.popup input[type=email]:focus,
+.popup input[type=password]:focus,
+.popup input[type=number]:focus {
+  margin: 0;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  font-style: normal;
+}
+
+.popup button {
+  outline: none;
+}
+
+.popup textarea {
+  width: 90%;
+  height: 100px;
+  resize: vertical;
+  padding: 10px;
+}
+
+.popup .form-holder {
+  padding: 0 0 7px;
+}
+
+.popup * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* end form elements */
+
+.logo {
+  width: 130px;
+  height: 50px;
+  margin: 20px 0 0;
+//  background: url("../../assets/images/keto-logo-lg.png") no-repeat;
+  background-size: 100% auto;
+}
+
+/*buttons*/
+
+.popup .button span {
+  position: relative;
+  z-index: 1;
+}
+
+.popup footer {
+  width: 100%;
+}
+
+.mobile-button,
+footer .mobile-button.button {
+  display: none;
+}
+
+/*end buttons*/
+
+/*errors*/
+
+.form-holder {
+  position: relative;
+}
+
+.has-error {
+  position: relative;
+}
+
+.has-error .accept-icon,
+.accept .accept-icon {
+  width: 14px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 12px; left: -22px;
+}
+
+//.has-error .accept-icon {
+//  background: url("../../assets/images/first-section-form-error.png") no-repeat center;
+//}
+
+//.accept .accept-icon {
+//  background: url("../../assets/images/first-section-form-ok.png") no-repeat center;
+//}
+
+.has-error .error {
+  border: 1px solid #EF4B52;
+}
+
+.has-error select {
+  border: 1px solid #EF4B52;
+}
+
+.accept input {
+  border: 1px solid #3BB400;
+}
+
+.inner-page .has-error .accept-icon {
+  left: -17px;
+}
+
+.inner-page .accept .accept-icon {
+  left: -17px;
+}
+/*end errors*/
+
+.popup h2 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 34px;
+  text-indent: 0;
+}
+
+.popup h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-indent: 0;
+}
+
+.popup {
+  font-family: sans-serif;
+}
+
+.cvv-image {
+  display: none;
+  text-align: center;
+  padding: 0 0 20px;
+}
+
+.cvv-image img {
+  width: 190px;
+  margin: auto;
+}
+
+.footer-info {
+  margin: 0 !important;
+}
+
+.inner-page .container.cf {
+  padding: 0 0 50px;
+}
+
+
+.popup-wrapper .popup .form-popup .button {
+  border: none;
+  outline: none;
+  background: #FF6600;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+
+  &:hover{
+    background: #d95803;
+  }
+}
+
+.popup .error-message {
+  display: none;
+}
+
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 820px;
+  }
+}
+/*** End Modals ***/
+
+
+
+
+
